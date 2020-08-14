@@ -1,0 +1,30 @@
+﻿@model DailyBlogger.Models.BlogPost
+@{
+    Layout = "_Layout";
+}
+
+    <div>
+        <h2>@Model.blogTitle</h2>
+    </div>
+    <div>
+        <p>@Model.content</p>
+    </div>
+
+    <div>
+        <p>
+            <a asp-action="Edit" asp-route-id="@Model.id"  class="navbar-brand">Edit this Post</a>
+        </p>
+        <p>
+            <a asp-action="Delete" asp-route-id="@Model.id"  class="navbar-brand">Delete this Post</a>
+        </p>
+        <p>
+            <a asp-action="List"  class="navbar-brand">Back to List</a>
+        </p>
+        <p>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Return to Home</a>
+        </p>
+        
+    </div>
+
+
+
